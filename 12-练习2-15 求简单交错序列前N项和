@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	int d,i,N,f;
+	double item,sum;
+	scanf("%d",&N);
+    //循环变量赋初值
+	item=1.0;
+    sum=0;
+    d=1;
+    f=1;
+	for(i=1;i<=N;i++){
+        //sum要在最前面!!!
+		sum=sum+item;
+        d=d+3;
+        f=-f;
+		//item是浮点型 
+		item=f*1.0/d;
+	}
+	printf("sum = %.3f",sum);
+	return 0; 
+}
