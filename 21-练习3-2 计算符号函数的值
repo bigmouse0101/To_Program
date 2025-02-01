@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int x;
+	scanf("%d",&x); 
+	if(x<0){
+		printf("sign(%d) = -1",x);
+	}else if(x==0){
+        //'='用于赋值，'=='用于判断
+		printf("sign(%d) = 0",x);	
+	}else{
+		printf("sign(%d) = 1",x);
+	}
+	return 0;
+}
