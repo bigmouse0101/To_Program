@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int i,N;
+	double sum;
+	scanf("%d",&N);
+    sum=0;//循环变量赋初值
+	for(i=1;i<=N;i++){
+        sum+=1.0/i;
+	}
+	printf("sum = %.6f",sum);
+	return 0; 
+}
