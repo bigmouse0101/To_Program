@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main(void) {
+    int num, N, gs;
+
+    scanf("%d %d", &num, &N);
+
+    int guess;
+
+    while (2) {
+        scanf("%d", &guess);
+        gs++;
+        if ((gs > N) || (guess < 0 && gs <= N)) {
+            //猜的次数超过N或没到N次时输入负数，自动结束
+            printf("Game Over\n");
+
+            return 0;//程序直接结束
+        }
+        //比较猜的数与既定的数
+        if (guess > num) {
+            printf("Too big\n");
+        }
+        if (guess < num) {
+            printf("Too small\n");
+        }
+        if (guess == num) {//当二者相等时，再讨论猜中时为第几次
+            if (gs == 1) {
+                printf("Bingo!\n");
+            }
+            else if (gs <= 3) {
+                printf("Lucky You!\n");
+            }
+            else {
+                printf("Good Guess!\n");
+            }
+
+            return 0;
+        }
+    }
+
+}
+害，这题当时真的折磨了鼠鼠好久...对语文不好的人来说真的是煎熬
