@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+	int d,i,N;
+	double item,sum;
+	scanf("%d",&N);
+	item=1.0;
+    sum=0;
+    d=1;
+	for(i=1;i<=N;i++){
+		sum=sum+item;
+        d=d+2;
+		//item是浮点型 
+		item=1.0/d;
+	}
+	printf("sum = %.6f",sum);
+	return 0; 
+}
