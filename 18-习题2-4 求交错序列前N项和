@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int d,i,N,f,z;
+	double item,sum;
+	scanf("%d",&N);
+    //循环变量赋初值!!!
+	item=1.0;
+    sum=0;
+    d=1;
+    f=1;
+    z=1;
+	for(i=1;i<=N;i++){
+        //sum要在最前面!!!
+		sum=sum+item;
+        //分母+2，变号，分子+1，并计算item的值，为下一次循环做准备。
+        d=d+2;
+        f=-f;
+        z=z+1;
+		//item是浮点型 
+		item=z*f*1.0/d;
+	}
+	printf("%.3f\n",sum);
+	return 0; 
+}
