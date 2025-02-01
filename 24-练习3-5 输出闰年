@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	int N,count=0;
+	int i;
+	scanf("%d",&N);
+	if(N>2000&&N<=2100){
+		for(i=2001;i<=N;i++){
+			if(((i%4==0)&&(i%100!=0))||(i%400==0)){
+				count++;
+                printf("%d\n",i);
+			}
+		}
+	}else if(N<=2000||N>2100){
+		count++;
+        printf("Invalid year!\n"); 
+	}if(count==0){
+        printf("None");
+    }
+	return 0;
+ } 
