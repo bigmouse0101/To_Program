@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+	double x1,y1,x2,y2,x3,y3,l1,l2,l3,p,l,s;
+	scanf("%lf%lf%lf%lf%lf%lf",&x1,&y1,&x2,&y2,&x3,&y3);
+	//判断两条线是否平行，斜率是否相同
+    //平面直角坐标系中任选三个点，除了三点共线情况外都能构成三角形 
+	 if((y1-y2)/(x1-x2)!=(y2-y3)/(x2-x3)){
+	 	//两点之间距离公式 
+	 	l1=sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+		l2=sqrt((x2-x3)*(x2-x3)+(y2-y3)*(y2-y3));
+		l3=sqrt((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3));
+		l=l1+l2+l3;
+		//海伦公式 
+	 	p=(l1+l2+l3)/2;
+	 	s=sqrt(p*(p-l1)*(p-l2)*(p-l3));
+	 	printf("L = %.2f, A = %.2f",l,s);
+	 }else
+		printf("Impossible");
+	return 0;
+}
