@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+	int x;
+	double y;
+	scanf("%d",&x); 
+	if(x<0){
+		printf("Invalid Value!");
+	}else if(x<=50){
+		y=0.53*x;
+        printf("cost = %.2f\n",y);
+	}else{
+		y=26.50+0.58*(x-50);
+        printf("cost = %.2f\n",y);
+	}
+	
+	return 0;
+}
