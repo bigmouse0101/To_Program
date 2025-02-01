@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i,n;
+	double power;
+	scanf("%d",&n);
+	for(i=0;i<=n;i++){
+		//pow函数输出为double型，转换成整数则写%.0f保留0位小数
+		//若要转换为长整形（long int）则利用强制类型转换 
+		power=pow(3,i);
+		printf("pow(3,%d) = %.0f\n",i,power);
+		
+	}
+	return 0;
+ } 
