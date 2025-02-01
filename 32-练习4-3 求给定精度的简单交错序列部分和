@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,f,d;
+    double eps,s;
+    scanf("%lf",&eps);
+    s=0;
+    d=f=1;
+    while(fabs(f*1.0/d)>eps){
+        s+=f*1.0/d;
+        f=-f;
+        d=d+3;
+    }
+    s=s+f*1.0/d;
+    printf("sum = %.6f\n",s);
+    return 0;
+}
