@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int t;
+    double s,m;
+    scanf("%lf%d",&s,&t);
+    if(s<=3&&s>0){
+        m=10;
+    }else if(s<=10){
+        m=10+(s-3)*2;
+    }else{
+        m=24+(s-10)*3;
+    }
+    if(t<5){
+        m=m;
+    }else{
+        m=m+t/5*2;
+    }
+    if(m-(int)m>=0.5){//四舍五入
+        printf("%.0f",m+1);
+    }else{
+        printf("%.0f",m);
+    }
+    
+    return 0;
+}
