@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	int f,c;
+    //f要在公式前
+	f=150;
+	c=5*(f-32)/9;
+	printf("fahr = %d, celsius = %d\n",f,c);
+	return 0;
+}
