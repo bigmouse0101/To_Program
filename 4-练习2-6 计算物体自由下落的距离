@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    double h,t=3.0,g=10.0;
+    h=0.5*g*t*t;
+    
+    printf("height = %.2f",h);
+	return 0;
+}
